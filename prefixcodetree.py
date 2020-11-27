@@ -9,8 +9,8 @@ class PrefixCodeTree:
         for element in codeword:
             if element == 1: 
                 index = index * 2 + 2
-        elif element == 0:
-            index = index * 2 + 1
+            elif element == 0:
+                index = index * 2 + 1
         #assign symbol into tree[index]
         self.tree[index] = symbol
 
@@ -29,9 +29,9 @@ class PrefixCodeTree:
                 index = index * 2 + 2
             elif char == '0':
                 index = index * 2 + 1
-        #if find a symbol, add to result, go to root of tree
-        if self.tree[index] != 0:
-            result += " " + self.tree[index]
-        index = 0 
+            #if find a symbol, add to result, go to root of tree
+            if self.tree[index] != 0:
+                result += " " + self.tree[index]
+                index = 0 
         return result
 
